@@ -10,11 +10,6 @@ jobs:
 
     steps:
     
-      development:
-        yEnv: ${{ secrets.TEST_SECRET }}
-      production:
-        yEnv: ${{ secrets.TEST_SECRET }}
-
       - name: Checkout
         uses: actions/checkout@v2
 
@@ -25,6 +20,7 @@ jobs:
 
       - name: Print env
         env:
+          yEnv: ${{ secrets.TEST_SECRET }}
           basic_env: Hello World!
           test_secret: ${{ secrets.TEST_SECRET }}
         run: |
