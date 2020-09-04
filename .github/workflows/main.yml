@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup node & npm
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+        run: |
+          npm ci
+          npm run build
+
+      - name: Print env
+        env:
+          basic_env: Hello World!
+          test_secret: ${{ secrets.TEST_SECRET }}
+        run: |
+          echo $basic_env
+          echo $test_secret
+
+      - name: Get token
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
