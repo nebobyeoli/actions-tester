@@ -17,11 +17,6 @@ jobs:
         with:
           node-version: '12.x'
 
-      - name: Setup npm
-        run: |
-          npm ci
-          npm run build
-
       - name: Print env
         env:
           basic_env: Hello World!
@@ -29,6 +24,11 @@ jobs:
         run: |
           echo $basic_env
           echo $test_secret
+
+      - name: npm run build
+        run: |
+          npm ci
+          npm run build
 
       - name: Get token
         uses: ad-m/github-push-action@master
