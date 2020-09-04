@@ -1,11 +1,8 @@
-const { setSecret } = require('@actions/core');
-
-require('dotenv').config();
 require('@actions/core');
+const yenv = require('yenv');
 
-// var sec = 'ABCD ' + process.env.test_secret.slice(0, 4);
-// console.log(`test_secret: ${sec}`);
-// console.log(`length: ${process.env.test_secret.length}`);
+const env = yenv('env.yml');
 
-setSecret('test_secret');
 console.log(process.env);
+console.log('crossEnv: ' + process.env.crossEnv);
+console.log('yenv: ' + env.yEnv);

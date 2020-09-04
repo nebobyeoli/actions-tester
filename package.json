@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "test": "echo Test",
-    "build": "node build.js"
+    "build": "cross-env crossEnv=${{secrets.TEST_SECRET}} node build.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,8 @@
   "homepage": "https://github.com/nebobyeoli/actions-tester#readme",
   "devDependencies": {
     "@actions/core": "^1.2.5",
-    "dotenv": "^8.2.0"
-  }
+    "cross-env": "^7.0.2",
+    "yenv": "^2.1.1"
+  },
+  "dependencies": {}
 }
