@@ -1,7 +1,7 @@
 require('@actions/core');
 const yenv = require('yenv');
 
-const env = yenv('github/workflows/main.yml');
+const env = yenv('.github/workflows/main.yml');
 
 console.log(process.env);
 // console.log('crossEnv: ' + process.env.crossEnv);
