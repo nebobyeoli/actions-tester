@@ -5,4 +5,4 @@ const env = yenv('.github/workflows/main.yml');
 
 console.log(process.env);
 // console.log('crossEnv: ' + process.env.crossEnv);
-console.log('yenv: ' + env.yEnv);
+console.log('yenv: ' + env.jobs.build.steps.env.yEnv);
