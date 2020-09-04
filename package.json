@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "test": "echo Test",
-    "build": "cross-env crossEnv=${{secrets.TEST_SECRET}} node build.js"
+    "build": "node build.js"
   },
   "repository": {
     "type": "git",
