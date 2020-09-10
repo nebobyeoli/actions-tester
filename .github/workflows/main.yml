@@ -20,9 +20,9 @@ jobs:
 
       - name: Set env
         env:
-          yEnv: ${{ secrets.TEST_SECRET }}
+          # yEnv: ${{ secrets.TEST_SECRET }}
           basic_env: Hello World!
-          test_secret: ${{ secrets.TEST_SECRET }}
+          test_secret: ${{ secrets.TEST_ }}
         run: |
           echo $basic_env
           echo $test_secret
