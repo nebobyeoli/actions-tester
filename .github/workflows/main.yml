@@ -11,7 +11,7 @@ jobs:
     steps:
     
       - name: Checkout & node
-        uses:
+        uses: |
           actions/checkout@v2
           actions/setup-node@v1
         with:
