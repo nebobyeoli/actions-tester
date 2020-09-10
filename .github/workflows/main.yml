@@ -10,7 +10,8 @@ jobs:
 
     steps:
     
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
 
       - name: Use node
         uses: actions/setup-node@v1
