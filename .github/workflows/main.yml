@@ -19,10 +19,12 @@ jobs:
           node-version: '12.x'
 
       - name: Set env
-        uses:
+        uses: actions/checkout@v2
+        with:
           # yEnv: ${{ secrets.TEST_SECRET }}
           basic_env: Hello World!
           test_secret: ${{ secrets.TEST_SECRET }}
+      - name: Get env
         run: |
           echo $basic_env
           echo $test_secret
