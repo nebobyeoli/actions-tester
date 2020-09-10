@@ -19,6 +19,8 @@ jobs:
           node-version: '12.x'
 
       - name: Set env
+        env:
+          test: ${{secrets.TEST_SECRET}}
         run: |
           echo "::set-env name=test_secret::${{secrets.TEST_SECRET}}"
 
