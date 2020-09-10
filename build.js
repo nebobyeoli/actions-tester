@@ -4,7 +4,8 @@ const core = require('@actions/core');
 core.exportVariable('envVar', '${{ secrets.TEST_SECRET }}');
 
 // console.log(`::set-env name=APP_NAME::$(cat Dockerfile | grep APP_NAME= | head -n 1 | grep -o '".*"' | sed 's/"//g')`);
-console.log('test_secret: ' + process.env.test_secret);
+const se = process.env.test_secret;
+console.log('test_secret: ' + se);
 console.log('envVar: ' + process.env.envVar);
 console.log('.');
 console.log(process.env);
