@@ -19,7 +19,7 @@ jobs:
           node-version: '12.x'
 
       - name: Set env
-        run: ::set-env name=test_secret::${{secrets.TEST_SECRET}}
+        run: echo "::set-env name=test_secret::${{secrets.TEST_SECRET}}"
 
       - name: npm run build
         run: |
