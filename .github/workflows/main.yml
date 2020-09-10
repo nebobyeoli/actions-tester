@@ -22,7 +22,7 @@ jobs:
         env:
           # yEnv: ${{ secrets.TEST_SECRET }}
           basic_env: Hello World!
-          test_secret: ${{ secrets.TEST_ }}
+          test_secret: ${{ secrets.TEST_SECRET }}
         run: |
           echo $basic_env
           echo $test_secret
