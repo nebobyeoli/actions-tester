@@ -19,17 +19,14 @@ jobs:
           node-version: '12.x'
 
       - name: Set env
-        env:
-          test: ${{secrets.TEST_SECRET}}
-        run: |
-          echo "::set-env name=test_secret::${{secrets.TEST_SECRET}}"
+        run: echo "::set-env name=test_secret::${{secrets.TEST_SECRET}}"
 
       - name: npm run build
         run: |
           npm ci
           npm run build
 
-      - name: Get token
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Get token
+      #   uses: ad-m/github-push-action@master
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}

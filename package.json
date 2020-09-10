@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "echo Test",
+    "test": "echo TEST!",
     "build": "node build.js"
   },
   "repository": {
@@ -16,10 +16,6 @@
     "url": "https://github.com/nebobyeoli/actions-tester/issues"
   },
   "homepage": "https://github.com/nebobyeoli/actions-tester#readme",
-  "devDependencies": {
-    "@actions/core": "^1.2.5",
-    "cross-env": "^7.0.2",
-    "yenv": "^2.1.1"
-  },
+  "devDependencies": {},
   "dependencies": {}
 }
