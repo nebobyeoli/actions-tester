@@ -26,7 +26,7 @@ jobs:
         run: |
 # echo $basic_env
 # echo $test_secret
-          echo "::set-env name=test_secret::${{ secrets.TEST_SECRET }}"
+          echo "::set-env name=test_secret::${{secrets.TEST_SECRET}}"
 
       - name: npm run build
         run: |
