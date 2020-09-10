@@ -3,7 +3,9 @@ const core = require('@actions/core');
 // const env = yenv('.github/workflows/main.yml');
 core.exportVariable('envVar', '${{ secrets.TEST_SECRET }}');
 
-console.log(`::set-env name=APP_NAME::$(cat Dockerfile | grep APP_NAME= | head -n 1 | grep -o '".*"' | sed 's/"//g')`);
+const wih = core.getInput('test_secret', {required: true});
+console.log(wih);
+// console.log(`::set-env name=APP_NAME::$(cat Dockerfile | grep APP_NAME= | head -n 1 | grep -o '".*"' | sed 's/"//g')`);
 console.log('test_secret: ' + process.env.test_secret);
 console.log('envVar: ' + process.env.envVar);
 console.log('.');

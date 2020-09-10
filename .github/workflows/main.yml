@@ -19,7 +19,7 @@ jobs:
           node-version: '12.x'
 
       - name: Set env
-        env:
+        with:
           # yEnv: ${{ secrets.TEST_SECRET }}
           basic_env: Hello World!
           test_secret: ${{ secrets.TEST_SECRET }}
