@@ -13,14 +13,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Use node
+      - name: Setup node
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
 
-      - name: Env and build
+      - name: Set env
+        run: ::set-env name=test_secret::${{secrets.TEST_SECRET}}
+
+      - name: npm run build
         run: |
-          echo "::set-env name=test_secret::${{secrets.TEST_SECRET}}"
           npm ci
           npm run build
 
