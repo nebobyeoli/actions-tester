@@ -17,5 +17,7 @@
   },
   "homepage": "https://github.com/nebobyeoli/actions-tester#readme",
   "devDependencies": {},
-  "dependencies": {}
+  "dependencies": {
+    "puppeteer": "^5.3.0"
+  }
 }

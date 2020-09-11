@@ -1,5 +1,3 @@
 node_modules
-index.html
-scripts.js
+.vscode
 webpack.config.js
-none.js
