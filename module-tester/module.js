@@ -1,5 +1,5 @@
-// import * as puppeteer from 'puppeteer';
-const puppeteer = require('puppeteer');
+import * as puppeteer from 'puppeteer';
+// const puppeteer = require('puppeteer');
 
 const lunge = async () => {
     puppeteer.launch({headless:false}).then(async browser => {
