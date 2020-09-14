@@ -7,7 +7,7 @@ app.use(express.static('images'));
 
 app.get('/', (req, res) => res.send(`
     <h1>Hello World!</h1>
-    <img src="${imgvar}" alt="HyruleSunset" width="960">
+    <img src="${imgvar}" alt="imgvar" width="960">
 `));
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
