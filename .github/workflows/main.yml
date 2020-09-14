@@ -21,10 +21,10 @@ jobs:
       - name: Set env
         run: echo "::set-env name=test_secret::${{secrets.TEST_SECRET}}"
 
-      - name: npm run build
+      - name: Build
         run: |
           npm ci
-          node tools/bulid.js
+          npm run tools-build
           npm run express-test
 
       # - name: Get token
