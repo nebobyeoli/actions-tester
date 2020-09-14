@@ -1,3 +1,5 @@
-node_modules
-.vscode
-webpack.config.js
+/node_modules
+/.vscode
+require.js
+# webpack.config.js
+/prev-jsons

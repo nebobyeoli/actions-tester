@@ -2,9 +2,11 @@
   "name": "actions-tester",
   "version": "1.0.0",
   "description": "",
+  "private": true,
   "scripts": {
     "test": "echo TEST!",
-    "build": "node build.js"
+    "build": "webpack",
+    "express-test": "node express-tester/main.js"
   },
   "repository": {
     "type": "git",
@@ -16,8 +18,13 @@
     "url": "https://github.com/nebobyeoli/actions-tester/issues"
   },
   "homepage": "https://github.com/nebobyeoli/actions-tester#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-node-externals": "^2.5.2"
+  },
   "dependencies": {
+    "express": "^4.17.1",
     "puppeteer": "^5.3.0"
   }
 }

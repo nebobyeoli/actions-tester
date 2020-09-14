@@ -24,7 +24,8 @@ jobs:
       - name: npm run build
         run: |
           npm ci
-          npm run build
+          node tools/bulid.js
+          npm run express-test
 
       # - name: Get token
       #   uses: ad-m/github-push-action@master
