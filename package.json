@@ -6,8 +6,19 @@
   "scripts": {
     "test": "echo TEST!",
     "build": "webpack",
+
     "tools-build": "node tools/build.js",
-    "express-test": "node express-tester/main.js"
+    "express-test": "node express-tester/main.js",
+    "pkg": "pkg . && node tools/rn-pkg.js"
+  },
+  "bin": "pkg-wrap-tester/main.js",
+  "exename": "main",
+  "outdir": "ci-wrap",
+  "pkg": {
+    "targets": [
+      "node12-linux",
+      "node12-win-x64"
+    ]
   },
   "repository": {
     "type": "git",
