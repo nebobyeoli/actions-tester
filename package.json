@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo TEST!",
     "build": "webpack",
-
     "tools-build": "node tools/build.js",
     "express-test": "node express-tester/main.js",
     "pkg": "pkg . && node tools/rn-pkg.js"
@@ -31,6 +30,7 @@
   },
   "homepage": "https://github.com/nebobyeoli/actions-tester#readme",
   "devDependencies": {
+    "pkg": "^4.4.9",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-node-externals": "^2.5.2"
