@@ -25,6 +25,7 @@ jobs:
         run: |
           npm ci
           npm run pkg
+          cd
           ci-wrap/main-win.exe
 
       # - name: Get token
