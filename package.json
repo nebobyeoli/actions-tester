@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/nebobyeoli/actions-tester#readme",
   "devDependencies": {
+    "javascript-obfuscator": "^2.2.0",
     "pkg": "^4.4.9",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",

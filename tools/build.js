@@ -1,3 +1,7 @@
+const path = require('path');
+console.log(path.join(__dirname, 'tools/build.js'));
+console.log();
+
 console.log('======= build.js =======');
 
 const test_secret = process.env.test_secret;

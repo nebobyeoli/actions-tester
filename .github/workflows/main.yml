@@ -15,8 +15,9 @@ jobs:
 
       - name: Build
         run: |
+          npm ci
+          npm run tools-build
           pwd
-          ls
 
       # - name: Get token
       #   uses: ad-m/github-push-action@master
