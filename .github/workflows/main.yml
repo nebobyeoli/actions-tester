@@ -18,6 +18,7 @@ jobs:
           npm ci
           npm run tools-build
           pwd
+          node server.js
 
       # - name: Get token
       #   uses: ad-m/github-push-action@master
